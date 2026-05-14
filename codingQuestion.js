@@ -551,15 +551,15 @@ const fruitNames = ['Banana', 'Banana', 'Apple', 'Apple', 'Orange', 'Orange', 'K
 // why we use if(i === fruitNames.length -1 )
 // Index vs Length
 
-// concept                                value 
+// concept                                value
 
-// length(total items)                      9 
+// length(total items)                      9
 // index                                    0-8
 
-// index always start from 0  
+// index always start from 0
 // so last position is always one less than total count
 
-// count is length of element their are 9 element in the array 
+// count is length of element their are 9 element in the array
 // because in index we start from 0-8 and when we find the legth of array it start from 1-9 thasty we have to do -1
 
 
@@ -570,7 +570,7 @@ const fruitNames = ['Banana', 'Banana', 'Apple', 'Apple', 'Orange', 'Orange', 'K
 
 
 // if(i === fruitNames.length-1){
-  // console.log("The last element",fruit)
+// console.log("The last element",fruit)
 //   console.log('Last Element ',fruitNames[i])
 //   console.log(i)
 // }
@@ -609,7 +609,7 @@ const fruitNames = ['Banana', 'Banana', 'Apple', 'Apple', 'Orange', 'Orange', 'K
 
 
 
-//  max min find 
+//  max min find
 // const data = [0.1,12,13,14,15, 2990 , 3000 , 3500 , 4500 , 5400 , 2300 , 7633 , 99101, 199392.9, 199392.7]
 
 
@@ -688,7 +688,7 @@ const fruitNames = ['Banana', 'Banana', 'Apple', 'Apple', 'Orange', 'Orange', 'K
 //     let count = {}
 //     for(let i = 0 ; i < arr.length; i++){
 //       let char = arr[i];
-//       if(count[char]){
+//       if(count[char]){     // Bracket Notation (Dynamic Property Access) It is used to access object properties dynamically.
 //         count[char]++
 //       }else{
 //         count[char]=1
@@ -721,7 +721,7 @@ const fruitNames = ['Banana', 'Banana', 'Apple', 'Apple', 'Orange', 'Orange', 'K
 
 // for(let j = 0; j < arr.length ; j++){
 //   if(arr[i] === uniquearr[j]){
-//     isDuplicate = true 
+//     isDuplicate = true
 //     break;
 //   }
 // }
@@ -733,3 +733,110 @@ const fruitNames = ['Banana', 'Banana', 'Apple', 'Apple', 'Orange', 'Orange', 'K
 
 
 // console.log(uniquearr)
+
+
+/*
+
+// finding 3rd largest value
+const arr = [0 , 1 , 2]
+// const arr = [1 , 2 , 3 , 4 , 5 , 6 , 7 , 8]
+
+class findingThirdLargestValue{
+
+  firstLargest(){
+    let firstValue = arr[0];
+    for (let i = 0 ; i < arr.length; i++){
+      if(arr[i] > firstValue ){
+        firstValue = arr[i]
+      }
+    }
+    return firstValue
+  }
+
+  secondLargest(){
+    let first = this.firstLargest()
+    let second = -Infinity
+    for(let j = 0 ; j < arr.length; j++){
+      if(arr[j] > second && arr[j] !== first){
+        second = arr[j]
+      }
+    }
+    return second
+  }
+
+  thirdLargest(){
+    let first = this.firstLargest()
+    let second = this.secondLargest();
+    let third = -Infinity
+    for(let k = 0 ; k < arr.length; k++){
+      if(arr[k] > third && arr[k] !== second && arr[k] !== first){
+        third = arr[k]
+      }
+    }
+    return third
+  }
+}
+
+const result = new findingThirdLargestValue()
+
+console.log("Second largest:",result.secondLargest())
+console.log("first largest:",result.firstLargest())
+console.log("third largest:",result.thirdLargest())
+*/
+
+
+
+
+
+
+
+
+
+
+// const arr = ['A' , 'B' , 'C' , 'D' , 'E' , 'A' , 'B' , 'C' , 'C' , 'D' , 12 ,12 ,12 ,13 ,13]
+
+// let uniqueArr = [];
+
+
+// for(let i = 0 ; i < arr.length ; i++){
+//   let isDuplicate = false
+
+//   for(let j = 0 ; j < arr.length ; j++){
+//     if(arr[i] === uniqueArr[j]){
+//       isDuplicate = true
+//       break;
+//     }
+//   }
+//   if(!isDuplicate){
+//     uniqueArr.push(arr[i])
+//   }
+// }
+
+// console.log(uniqueArr)
+
+
+
+
+
+
+// const arr = [12, 12, 13, 13, 14, 14, 15, 15, 17, 16, 17, 18, 18];
+// let uniqueArr = [];
+
+
+// for (let i = 0; i < arr.length; i++) {
+//   let isDuplicate = false
+
+//   for (let j = 0; j < arr.length; j++) {
+//     if (arr[i] === uniqueArr[j]) {
+//       isDuplicate = true
+//       break;
+//     }
+//   }
+//   if (!isDuplicate) {
+//     uniqueArr.push(arr[i])
+//   }
+//   uniqueArr.sort((a, b) => a - b)
+// }
+
+
+// console.log("Unique Array are:", uniqueArr)
